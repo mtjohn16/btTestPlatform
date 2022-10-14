@@ -9,7 +9,7 @@ class Configuration
 {
     public static $global;
 
-    private $_environment = 'SANDBOX';
+    private $_environment = 'sandbox';
     private $_merchantId = 'snd9sxynt66kymk9';
     private $_publicKey = 'm73gh5xshv9m9vdt';
     private $_privateKey = '818d01c459118979a0f27e070769dfc3';
