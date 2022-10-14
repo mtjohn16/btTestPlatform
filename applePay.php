@@ -26,7 +26,7 @@
 			}
 
 			braintree.client.create({
-				authorization: <?php echo $clientToken; ?>
+				authorization: '<?php echo $clientToken;?>'
 			}, function (clientErr, clientInstance) {
 				if (clientErr) {
 					console.error('Error creating client:', clientErr);
