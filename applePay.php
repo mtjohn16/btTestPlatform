@@ -7,7 +7,7 @@
 	<body>
 		<script type="text/javascript">
 			console.log("testing session:");
-			if (window.ApplePaySession && ApplePaySession.supportsVersion(3)) {
+			if (window.ApplePaySession && ApplePaySession.supportsVersion(3) && ApplePaySession.canMakePayments()) {
 				// This device supports version 3 of Apple Pay.
 				console.log("success 1");
 			}
