@@ -15,7 +15,7 @@
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/apple-pay.min.js"></script>
 	</head>
 	<body>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			console.log("testing session:");
 			if (!window.ApplePaySession) {
 				console.error('This device does not support Apple Pay');
@@ -103,6 +103,6 @@
 				});
 			});
 
-		</script> -->
+		</script>
 	</body>
 </html>
