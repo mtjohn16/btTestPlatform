@@ -93,7 +93,7 @@
 							// and may also be sent to your server.
 							console.log('billingPostalCode:', event.payment.billingContact.postalCode);
 
-							/ After you have transacted with the payload.nonce,
+							// After you have transacted with the payload.nonce,
 							// call `completePayment` to dismiss the Apple Pay sheet.
 							session.completePayment(ApplePaySession.STATUS_SUCCESS);
 						});
