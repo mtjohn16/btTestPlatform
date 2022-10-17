@@ -101,7 +101,8 @@
 								session.completeMerchantValidation(merchantSession);
 							});
 						};
-
+						session.begin();
+						
 						session.onpaymentauthorized = function (event) {
 							console.log('Your shipping address is:', event.payment.shippingContact);
 
@@ -127,7 +128,7 @@
 							});
 						};
 
-						session.begin();
+
 
 		
 					});
