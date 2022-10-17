@@ -15,6 +15,7 @@
 	<head>
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/client.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/apple-pay.min.js"></script>
+		<script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
 
 		<style>
 			apple-pay-button {
