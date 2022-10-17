@@ -5,7 +5,9 @@
 	$config = new Braintree\Configuration();
 	$gateway = new Braintree\Gateway($config);
 	// pass $clientToken to your front-end
-	$clientToken = $gateway->clientToken()->generate();
+	$clientToken = $gateway->clientToken()->generate([
+		"merchantAccountId" => "USSeller"
+	]);
 
 ?>
 <!DOCTYPE html>
