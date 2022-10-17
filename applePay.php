@@ -31,7 +31,7 @@
 		<h1>Braintree - Apple Pay Button</h1>
 
 		<p>Here's the button:</p>
-		<apple-pay-button buttonstyle="black" type="buy" locale="el-GR"></apple-pay-button>
+		<apple-pay-button buttonstyle="black" type="buy" locale="el-GR">Stuff in the button!</apple-pay-button>
 		<script type="text/javascript">
 			console.log("testing session:");
 			if (!window.ApplePaySession) {
