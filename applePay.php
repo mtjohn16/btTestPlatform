@@ -32,8 +32,14 @@
 		<h1>Braintree - Apple Pay Button</h1>
 
 		<p>Here's the button:</p>
-		<apple-pay-button buttonstyle="black" type="buy" locale="en-US"></apple-pay-button>
+		<apple-pay-button id="myAPButton" buttonstyle="black" type="buy" locale="en-US"></apple-pay-button>
+
+
+
+
 		<script type="text/javascript">
+
+			var applePayButton = document.getElementById('myAPButton');
 			console.log("testing session:");
 			if (!window.ApplePaySession) {
 				console.error('This device does not support Apple Pay');
@@ -117,7 +123,11 @@
 						});
 					};
 
-					session.begin();
+					applePayButton.addEventListener('click', function() {
+						//start the AP session, and do any other stuff when AP button is clicked
+						session.begin();
+					});
+	
 				});
 			});
 
