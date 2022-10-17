@@ -15,8 +15,23 @@
 	<head>
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/client.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/apple-pay.min.js"></script>
+
+		<style>
+			apple-pay-button {
+				--apple-pay-button-width: 140px;
+				--apple-pay-button-height: 30px;
+				--apple-pay-button-border-radius: 5px;
+				--apple-pay-button-padding: 5px 0px;
+			}
+		</style>
+
 	</head>
 	<body>
+
+		<h1>Braintree - Apple Pay Button</h1>
+
+		<p>Here's the button:</p>
+		<apple-pay-button buttonstyle="black" type="buy" locale="el-GR"></apple-pay-button>
 		<script type="text/javascript">
 			console.log("testing session:");
 			if (!window.ApplePaySession) {
