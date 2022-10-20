@@ -73,9 +73,9 @@
 
 			applePayButton.addEventListener('click', function() {
 				console.log("Repeating full Client Instance: " +  JSON.stringify(this.clientInstance));
-				console.log("Repeating AP instance here: " + applePayInstance._instantiatedWithClient); // JSON.stringify(applePayInstance));
+				console.log("Repeating AP instance here: " + this.applePayInstance._instantiatedWithClient); // JSON.stringify(applePayInstance));
 
-				var paymentRequest = applePayInstance.createPaymentRequest({
+				var paymentRequest = this.applePayInstance.createPaymentRequest({
 					total: {
 						label: 'My Store',
 						amount: '19.99'
@@ -94,7 +94,7 @@
 				var session = new ApplePaySession(3, paymentRequest);
 
 				session.onvalidatemerchant = function (event) {
-					applePayInstance.performValidation({
+					this.applePayInstance.performValidation({
 						validationURL: event.validationURL,
 						displayName: 'My Store'
 					}, function (err, merchantSession) {
@@ -110,7 +110,7 @@
 				session.onpaymentauthorized = function (event) {
 					console.log('Your shipping address is:', event.payment.shippingContact);
 
-					applePayInstance.tokenize({
+					this.applePayInstance.tokenize({
 						token: event.payment.token
 					}, function (tokenizeErr, payload) {
 						if (tokenizeErr) {
