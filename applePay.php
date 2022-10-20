@@ -56,7 +56,7 @@
 				braintree.client.create({
 					authorization: '<?php echo $clientToken;?>'
 				}, function (clientErr, clientInstance) {
-					console.log("Putting Client instance here: " + clientInstance.authorizationType); // JSON.stringify(clientInstance));
+					console.log("Putting Client instance here: " + JSON.stringify(clientInstance));
 					if (clientErr) {
 						console.error('Error creating client:', clientErr);
 						return;
