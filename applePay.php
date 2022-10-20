@@ -72,7 +72,7 @@
 				});
 
 			applePayButton.addEventListener('click', function() {
-				console.log("Repeating full Client Instance: " +  JSON.stringify(clientInstance));
+				console.log("Repeating full Client Instance: " +  JSON.stringify(this.clientInstance));
 				console.log("Repeating AP instance here: " + applePayInstance._instantiatedWithClient); // JSON.stringify(applePayInstance));
 
 				var paymentRequest = applePayInstance.createPaymentRequest({
