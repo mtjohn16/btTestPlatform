@@ -56,7 +56,7 @@
 				braintree.client.create({
 					authorization: '<?php echo $clientToken;?>'
 				}, function (clientErr, clientInstance) {
-					console.log("Putting Client instance here: " + clientInstance.authorizationType + JSON.stringify(clientInstance));
+					console.log("Putting Client instance here: " + clientInstance.authorizationType); // JSON.stringify(clientInstance));
 					if (clientErr) {
 						console.error('Error creating client:', clientErr);
 						return;
@@ -65,7 +65,7 @@
 					braintree.applePay.create({
 						client: clientInstance
 					}, function (applePayErr, applePayInstance) {
-						console.log("Putting AP instance here: " + JSON.stringify(applePayInstance));
+						console.log("Putting AP instance here: " + applePayInstance._instantiatedWithClient); // JSON.stringify(applePayInstance));
 						if (applePayErr) {
 							console.error('Error creating applePayInstance:', applePayErr);
 							return;
