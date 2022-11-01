@@ -51,91 +51,10 @@
 
 			// testing having the BT client create and AP create outside of event listener
 
-				braintree.client.create({
-					authorization: '<?php echo $clientToken;?>'
-				}, function (clientErr, clientInstance) {
-					console.log("full Client Instance: " +  JSON.stringify(clientInstance));
-					if (clientErr) {
-						console.error('Error creating client:', clientErr);
-						return;
-					}
 
-					braintree.applePay.create({
-						client: clientInstance
-					}, function (applePayErr, applePayInstance) {
-						console.log("Putting AP instance here: " + applePayInstance._instantiatedWithClient); // JSON.stringify(applePayInstance));
-						if (applePayErr) {
-							console.error('Error creating applePayInstance:', applePayErr);
-							return;
-						}
-					});
-				});
-
-			applePayButton.addEventListener('click', function() {
-				console.log("Repeating full Client Instance: " +  JSON.stringify(this.clientInstance));
-				console.log("Repeating AP instance here: " + this.applePayInstance._instantiatedWithClient); // JSON.stringify(applePayInstance));
-
-				var paymentRequest = this.applePayInstance.createPaymentRequest({
-					total: {
-						label: 'My Store',
-						amount: '19.99'
-					},
-
-					// We recommend collecting billing address information, at minimum
-					// billing postal code, and passing that billing postal code with
-					// all Apple Pay transactions as a best practice.
-					requiredBillingContactFields: ["postalAddress"]
-				});
-				console.log(paymentRequest.countryCode);
-				console.log(paymentRequest.currencyCode);
-				console.log(paymentRequest.merchantCapabilities);
-				console.log(paymentRequest.supportedNetworks);
-
-				var session = new ApplePaySession(3, paymentRequest);
-
-				session.onvalidatemerchant = function (event) {
-					this.applePayInstance.performValidation({
-						validationURL: event.validationURL,
-						displayName: 'My Store'
-					}, function (err, merchantSession) {
-						if (err) {
-						// You should show an error to the user, e.g. 'Apple Pay failed to load.'
-						return;
-						}
-						session.completeMerchantValidation(merchantSession);
-					});
-				};
-				session.begin();
-				
-				session.onpaymentauthorized = function (event) {
-					console.log('Your shipping address is:', event.payment.shippingContact);
-
-					this.applePayInstance.tokenize({
-						token: event.payment.token
-					}, function (tokenizeErr, payload) {
-						if (tokenizeErr) {
-							console.error('Error tokenizing Apple Pay:', tokenizeErr);
-							session.completePayment(ApplePaySession.STATUS_FAILURE);
-							return;
-						}
-
-						// Send payload.nonce to your server.
-						console.log('nonce:', payload.nonce);
-
-						// If requested, address information is accessible in event.payment
-						// and may also be sent to your server.
-						console.log('billingPostalCode:', event.payment.billingContact.postalCode);
-
-						// After you have transacted with the payload.nonce,
-						// call `completePayment` to dismiss the Apple Pay sheet.
-						session.completePayment(ApplePaySession.STATUS_SUCCESS);
-					});
-				};
-
-			});
 					// Set up your Apple Pay button here
 
-/*
+
 			applePayButton.addEventListener('click', function() {
 
 
@@ -226,8 +145,6 @@
 					});
 				});
 			});
-
-			*/
 		</script>
 	</body>
 </html>
