@@ -115,7 +115,7 @@
 						session.begin();
 						
 						session.onpaymentauthorized = function (event) {
-							console.log('Your shipping address is:', event.payment.shippingContact);
+							console.log('Your shipping address is:', event.payment);
 
 							applePayInstance.tokenize({
 								token: event.payment.token
