@@ -14,10 +14,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script scr="https://code.jquery.com/jquery-3.7.0.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.97.2/js/client.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.97.2/js/venmo.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.97.2/js/data-collector.min.js"></script>
+				<script scr="https://code.jquery.com/jquery-3.7.0.js"></script>
 	</head>
 	<body>
 		
