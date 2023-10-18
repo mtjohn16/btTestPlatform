@@ -14,12 +14,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script scr="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.97.2/js/client.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.97.2/js/venmo.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.97.2/js/data-collector.min.js"></script>
 	</head>
 	<body>
 		
+
+		<h1>Venmo test button</h1>
+		<hr>
+
+		<div>
+			<button type="button" id="venmo-button"></button>
+		</div>
 		<script>
 
 			var venmoButton = document.getElementById('venmo-button');
