@@ -80,6 +80,7 @@
 			braintree.venmo.create({
 				client: clientInstance,
 				allowDesktop: true,
+				allowNewBrowserTab: false,
 				paymentMethodUsage: 'multi_use' // available in v3.77.0+
 				// Add allowNewBrowserTab: false if your checkout page does not support
 				// relaunching in a new tab when returning from the Venmo app. This can
