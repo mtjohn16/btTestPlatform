@@ -72,7 +72,7 @@
 
 			braintree.venmo.create({
 				client: clientInstance,
-				mobileWebFallBack: true,
+				//mobileWebFallBack: true,
 				allowDesktop: true,
 				allowNewBrowserTab: false,
 				paymentMethodUsage: 'single_use' // available in v3.77.0+
