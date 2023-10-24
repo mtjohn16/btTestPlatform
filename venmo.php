@@ -73,6 +73,7 @@
 			braintree.venmo.create({
 				client: clientInstance,
 				//mobileWebFallBack: true,
+				deepLinkReturnURL: "https://test-bt-platform.herokuapp.com/venmo.php",
 				allowDesktop: true,
 				allowNewBrowserTab: false,
 				paymentMethodUsage: 'single_use' // available in v3.77.0+
