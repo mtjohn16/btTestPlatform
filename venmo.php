@@ -30,7 +30,7 @@
 		</div>
 
 
-		<div style="display: none;">
+		<div id="afterVenmo" style="display: none;">
 			<br><br>
 			<p>Nonce:
 				<div id="nonce"></div>
@@ -149,6 +149,8 @@
 			// Display the Venmo username in your checkout UI.
 			console.log('Venmo user:', payload.details.username);
 			document.getElementById("username").innerHTML = payload.details.username;
+
+			document.getElementById('afterVenmo').style.display = 'block';
 			}
 		</script>
 					
