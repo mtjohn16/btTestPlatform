@@ -40,13 +40,6 @@
 			</p>
 		</div>
 		<script>
-		     jQuery.noConflict();
-		     // Use jQuery via jQuery() instead of via $()
-		     jQuery(document).ready(function(){
-		       jQuery("div").hide();
-		     });  
-		</script>
-		<script>
 
 			var venmoButton = document.getElementById('venmo-button');
 
@@ -152,10 +145,10 @@
 			// Send the payment method nonce to your server, e.g. by injecting
 			// it into your form as a hidden input.
 			console.log('Got a payment method nonce:', payload.nonce);
-			jQuery("#nonce").html(payload.nonce);
+			document.getElementById("nonce").innerHTML = payload.nonce;
 			// Display the Venmo username in your checkout UI.
 			console.log('Venmo user:', payload.details.username);
-			jQuery("#username").html(payload.details.username);
+			document.getElementById("username").innerHTML = payload.details.username;
 			}
 		</script>
 					
