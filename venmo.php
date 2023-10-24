@@ -77,7 +77,7 @@
 				deepLinkReturnURL: "https://test-bt-platform.herokuapp.com/venmo.php",
 				allowDesktop: true,
 				allowNewBrowserTab: false,
-				paymentMethodUsage: 'single_use' // available in v3.77.0+
+				paymentMethodUsage: 'multi_use' // available in v3.77.0+
 				// Add allowNewBrowserTab: false if your checkout page does not support
 				// relaunching in a new tab when returning from the Venmo app. This can
 				// be omitted otherwise.
