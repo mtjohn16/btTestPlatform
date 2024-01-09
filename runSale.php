@@ -6,7 +6,7 @@
     $milliseconds = round(microtime(true) * 1000);
     $nonce = $_POST['nonce'];
     $deviceData = $_POST['deviceData'];
-    $type 'ApplePay';//$_POST['type'];
+    $type = 'ApplePay';//$_POST['type'];
     $token = '0vhmh60r'; //'testingEmailAddTOken123';
     $amount = $_POST['amount'];
     $custID = '';
