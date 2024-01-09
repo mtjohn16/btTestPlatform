@@ -44,7 +44,7 @@
 			Nonce generated from BT:
 			<code id="btNonce"></code><br>
 
-			<form method="post" action="runsale.php">
+			<form method="post" action="runSale.php">
 				<input type="hidden" id="nonce" name="nonce">
 				Amount:
 				<input type="text" id="amount" name="amount">
