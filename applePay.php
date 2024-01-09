@@ -13,6 +13,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/client.min.js"></script>
 		<script src="https://js.braintreegateway.com/web/3.87.0/js/apple-pay.min.js"></script>
 		<script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
@@ -31,8 +33,26 @@
 
 		<h1>Braintree - Apple Pay Button</h1>
 
-		<p>Here's the button:</p>
-		<apple-pay-button id="myAPButton" buttonstyle="black" type="buy" locale="en-US"></apple-pay-button>
+		<div id="applePay">
+
+			<p>Here's the button:</p>
+			<apple-pay-button id="myAPButton" buttonstyle="black" type="buy" locale="en-US"></apple-pay-button>
+		</div>
+
+		<div id="runSale" style="display: none;">
+			<br>
+			Nonce generated from BT:
+			<code id="btNonce"></code><br>
+
+			<form method="post" action="runsale.php">
+				<input type="hidden" id="nonce" name="nonce">
+				Amount:
+				<input type="text" id="amount" name="amount">
+				<input type="submit" name="Run Transaction">
+			</form>
+			
+		</div>
+
 
 
 
@@ -128,7 +148,10 @@
 									session.completePayment(ApplePaySession.STATUS_FAILURE);
 									return;
 								}
-
+								$("#nonce").val(payload.nonce);
+								$("#btNonce").html(payload.nonce);
+								$("#applePay").hide();
+								$("#runSale").show();
 								// Send payload.nonce to your server.
 								console.log('nonce:', payload.nonce);
 
