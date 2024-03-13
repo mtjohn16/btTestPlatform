@@ -69,7 +69,7 @@
                 <br><hr>
                 
                 <p>301 PX button:</p>
-                <div id="paypal-button-3" style="width: 200px;"></div>
+                <div id="paypal-button-3" style="width: 301px;"></div>
                 <br><hr>
                 
                 <hr>
