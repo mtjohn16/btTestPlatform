@@ -81,7 +81,7 @@
                     <br> Shipping address from Braintree:
                     <br>
                     <code id="shippingAddress"></code>
-                    <form method="post" action="runSale.php">
+                    <form>
                         <input id="nonce" type="hidden" name="nonce">
                         <input id="deviceData" type="hidden" name="deviceData">
                         <input id="type" type="hidden" name="type">
