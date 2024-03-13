@@ -1,5 +1,5 @@
  <?php
-    require_once 'braintree/lib/Braintree.php';
+    require_once 'lib/Braintree.php';
     
     $config = new Braintree\Configuration();
     $gateway = new Braintree\Gateway($config);
