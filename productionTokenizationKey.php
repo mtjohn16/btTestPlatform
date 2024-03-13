@@ -64,10 +64,13 @@
                 </div>
                 
 
-                <p>Single Div both PP buttons:</p>
+                <p>200 PX button:</p>
                 <div id="paypal-button" style="width: 200px;"></div>
                 <br><hr>
                 
+                <p>301 PX button:</p>
+                <div id="paypal-button-3" style="width: 200px;"></div>
+                <br><hr>
                 
                 <hr>
 
@@ -222,6 +225,7 @@
                                     // Render the standalone button for that funding source
                                     button.render('#paypal-button');
                                     button.render('#paypal-button-2');
+                                    button.render('#paypal-button-3');
 
                                 }
 
