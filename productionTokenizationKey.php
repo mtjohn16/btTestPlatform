@@ -13,12 +13,12 @@
                 <meta charset="UTF-8">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                 <!-- Load the client component. -->
-                <script src="https://js.braintreegateway.com/web/3.73.1/js/client.min.js"></script>
-                <script src="https://js.braintreegateway.com/web/3.73.1/js/data-collector.min.js"></script>
+                <script src="https://js.braintreegateway.com/web/3.101.0/js/client.min.js"></script>
+                <script src="https://js.braintreegateway.com/web/3.101.0/js/data-collector.min.js"></script>
 
                 <script src="https://js.braintreegateway.com/web/dropin/1.26.1/js/dropin.min.js"></script>
                 <!-- Load the PayPal Checkout component. -->
-                <script src="https://js.braintreegateway.com/web/3.73.1/js/paypal-checkout.min.js"></script>
+                <script src="https://js.braintreegateway.com/web/3.101.0/js/paypal-checkout.min.js"></script>
 
                 <!-- Latest compiled and minified CSS -->
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
