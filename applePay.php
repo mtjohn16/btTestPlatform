@@ -159,6 +159,7 @@
 								// If requested, address information is accessible in event.payment
 								// and may also be sent to your server.
 								console.log('billingPostalCode:', event.payment.billingContact.postalCode);
+								console.log('more event data: ', event.payment.token.paymentMethod);
 
 								// After you have transacted with the payload.nonce,
 								// call `completePayment` to dismiss the Apple Pay sheet.
